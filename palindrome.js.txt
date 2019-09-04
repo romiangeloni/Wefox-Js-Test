@@ -1,0 +1,13 @@
+function palindrome(str) {
+  var re = /[\W_]/g;
+  var lowRegStr = str.toLowerCase().replace(re, '');
+  var reverseStr = lowRegStr.split('').reverse().join(''); 
+  return reverseStr === lowRegStr;
+}
+console.log("The sequence 'Race Car' is palindrome: ", palindrome("Race Car"));
+console.log("The sequence '123454321' is palindrome: ", palindrome("123454321"));
+console.log("The sequence: 'A man, a plan, a canal. Panama' is palindrome: ", palindrome("A man, a plan, a canal. Panama"));
+console.log("The sequence 'Was it a car or a cat I saw?' is palindrome: ", palindrome("Was it a car or a cat I saw?"));
+console.log("The sequence 'No 'x' in Nixon' is palindrome: ", palindrome("No 'x' in Nixon"));
+console.log("The sequence '1234543' is palindrome: ", palindrome("1234543"));
+console.log("The sequence 'Wefox' is palindrome: ", palindrome("Wefox"));

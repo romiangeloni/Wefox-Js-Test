@@ -1,0 +1,16 @@
+function numRandom(range){
+  return Array(range).fill().map(() => Math.round(Math.random() * range))
+}
+
+function findMin(numberList) {
+  let min = numberList[0];
+  for (let i = 1, len=numberList.length; i < len; i++) {
+    let v = numberList[i];
+    min = (v < min) ? v : min;
+  }
+
+  return min;
+}
+console.log("Minimum number: ",findMin(numRandom(500)))
+console.log("Minimum number: ",findMin(numRandom(20000)))
+console.log("Minimum number: ",findMin(numRandom(100000)))
